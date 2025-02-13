@@ -16,9 +16,13 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
             animation: fadeIn 1.5s ease-in-out;
         }
+
         .container {
+            position: relative;
             max-width: 900px;
             text-align: center;
             background: white;
@@ -26,23 +30,28 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
             animation: slideUp 1.5s ease-in-out;
+            z-index: 2;
         }
+
         h1 {
             font-size: 80px;
             color: #2e7d32;
             margin-bottom: 20px;
             animation: bounce 1.5s infinite alternate;
         }
+
         h2 {
             font-size: 50px;
             color: #388e3c;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 24px;
             color: #4caf50;
             margin-bottom: 40px;
         }
+
         .cta {
             background: #2e7d32;
             color: white;
@@ -53,17 +62,51 @@
             display: inline-block;
             transition: background 0.3s ease-in-out;
         }
+
         .cta:hover {
             background: #1b5e20;
         }
+
+        .info-box {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: #2e7d32;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .top-info-box {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: #2e7d32;
+            text-align: center;
+            max-width: 90%;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         @keyframes slideUp {
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
         @keyframes bounce {
             from { transform: translateY(0); }
             to { transform: translateY(-10px); }
@@ -71,11 +114,18 @@
     </style>
 </head>
 <body>
+    <div class="top-info-box">
+        "Wanna Green" is not "Wanna Greens." We focus on quality over quantity. One fresh, premium green is always better than many.
+    </div>
     <div class="container">
         <h1>Wanna Green</h1>
         <h2>Coming Soon!</h2>
         <p>Fresh things are coming! Stay tuned.</p>
         <a href="mailto:ayham.alzoubi44@gmail.com" class="cta">Contact Us</a>
+    </div>
+    <div class="info-box">
+        We are not "Wanna Greens." We are "Wanna Green"—a single, fresh, and high-quality green that stands above the rest.
+        No need for many when one is fresh and perfect.
     </div>
 </body>
 </html>
